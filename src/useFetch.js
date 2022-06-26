@@ -12,6 +12,7 @@ function useFetch(url) {
       .get(url)
       .then((response) => {
         setData(response.data);
+        console.log(response.data);
       })
       .catch((err) => {
         setError(err);

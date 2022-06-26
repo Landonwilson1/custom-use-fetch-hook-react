@@ -13,7 +13,8 @@ function App() {
   return (
     <div className="App">
       <h1>
-        {joke.name}
+        {joke?.causes.name}
+        {console.log(joke?.causes.name)}
       </h1>
 
       <button onClick={refetch}> Refetch</button>
