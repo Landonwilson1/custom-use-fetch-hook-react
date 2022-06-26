@@ -10,10 +10,15 @@ function App() {
 
   if (error) console.log(error);
 
+  let names = []
+  for (let i = 0; i < data.causes.length; i++) {
+    names.push(data.causes[i].name);
+    }
+
   return (
     <div className="App">
       <h1>
-        {data?.causes.name}
+        {names}
       </h1>
 
       <button onClick={refetch}> Refetch</button>
