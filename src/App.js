@@ -2,7 +2,7 @@ import "./App.css";
 import useFetch from "./useFetch";
 
 function App() {
-  const { data: joke, loading, error, refetch } = useFetch(
+  const { data, loading, error, refetch } = useFetch(
     "https://api.givebacks.com/services/core/causes/search"
   );
 
@@ -13,8 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        {joke?.causes.name}
-        {console.log(joke?.causes.name)}
+        {data?.causes.name}
       </h1>
 
       <button onClick={refetch}> Refetch</button>
